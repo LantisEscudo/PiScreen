@@ -1,0 +1,9 @@
+TODO:
+Implement loading of images into panels
+Implement scheduling of "Now Playing" panel
+Implement rotation of "Coming Up" panel
+Verify compatibility with uzbl
+Test layout and performance on actual hardware
+Text formatting for "Now Playing" and "Coming Up" panel overlays
+More attractive colors and fonts for crawl
+Write startup uzbl shell script
