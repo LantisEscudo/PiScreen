@@ -16,7 +16,7 @@ Webkit-based browsers are recommended, being the only engine to support it.
 Usage
 -----
 Edit the main.html file, then open it in your browser of choice.  A shell
-script to open a fullscreen uzbl browser is provided.
+script to open a fullscreen uzbl browser will be provided in a future update.
 
 Scheduling information and filenames of the images you wish to display for
 individual events are placed in the DIV with ID _scheduleEvents_, one per
@@ -25,7 +25,8 @@ line, in the format:
 **YYYY/MM/DD HH:MM:SS|<em>filename</em>**
 
 The time in each line should be the *start time* of the event.  The previous
-entry in the list will be displayed until the start time is reached.
+entry in the list will be displayed until the start time is reached, so the 
+items should be entered in the order you want them to be displayed.
 
 Filenames may be absolute or relative.
 
