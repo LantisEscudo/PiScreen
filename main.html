@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Marquee Test</title>
+<title>PiScreen</title>
 <script src="jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="jquery.timer.js" type="text/javascript"></script>
 <script src="crawler.js" type="text/javascript"></script>
+<script src="schedule.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	loadCrawl();
+    marquee($('#display'), $('#text'));  //Enter name of container element & marquee element
+
+	parseSchedule();
+	for(var i=0; i<scheduleFiles.length; i++) { //Rotate through the list to make
+												//sure the current item is showing
+		rotSched();
+		console.log("Initial rotate set");
+	}
+	
+	var timer = $.timer(rotSched);
+	timer.set({ time : 25000, autostart : true });
+	timer.play();
+	
+});
+
+
+</script>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
@@ -11,11 +33,14 @@
 <div id="nowPlaying">Now Playing:</div>
 <div id="comingUp">Coming Up Later:</div>
 <div id="display">
-  <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non magna ut orci pretium molestie. ?? ???????? ???? ??? ???!!!</p>
+  <p id="text">Please enable JavaScript for this page to be displayed correctly.</p>
 </div>
 <div id="crawler">
-This is Line 1
-Weirded out that line lengths change
+Enter lines to be listed
+on the crawler here
+One per line
+</div>
+<div id="scheduleEvents">
 </div>
 </body>
 </html>

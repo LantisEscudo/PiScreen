@@ -46,8 +46,7 @@ function marquee(a, b) {
 
 }
 
-function loadCrawl()
-{
+function loadCrawl() {
 	lines = $('#crawler').text();
 	crawlerLines = lines.split('\n');
 	var idx = crawlerLines.indexOf("");
@@ -61,8 +60,3 @@ function loadCrawl()
 	//Set text
 	$('#text').text(crawlerLines[crawlIndex]);
 };
-
-$(document).ready(function() {
-	loadCrawl();
-    marquee($('#display'), $('#text'));  //Enter name of container element & marquee element
-});

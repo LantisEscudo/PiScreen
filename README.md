@@ -10,7 +10,8 @@ series of text notes.
 
 It is intended for use on a Raspberry Pi using uzbl as the browser, but, as
 a HTML/CSS/Javascript-based solution, can be used with any computer with
-a browser that can be full-screened.
+a browser that can be full-screened.  As some use is made of stroked text,
+Webkit-based browsers are recommended, being the only engine to support it.
 
 Usage
 -----
@@ -21,7 +22,7 @@ Scheduling information and filenames of the images you wish to display for
 individual events are placed in the DIV with ID _scheduleEvents_, one per
 line, in the format:
 
-**MM/DD/YYYY HH:MM:SS|<em>filename</em>**
+**YYYY/MM/DD HH:MM:SS|<em>filename</em>**
 
 The time in each line should be the *start time* of the event.  The previous
 entry in the list will be displayed until the start time is reached.
